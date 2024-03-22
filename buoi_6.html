@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>BÀI TẬP 4</h1>
+<h2>ĐƠN HÀNG</h2>
+
+<div id="myList">
+    <table>
+        <tr>
+          <td></td>
+          <td>Mã hàng</td>
+          <td>Tên hàng</td>
+          <td>số lượng</td>
+        </tr>
+        <tr>
+          <td>Sản phẩm 1</td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><button onclick="myFunction()">+</button></td>
+        </tr>
+      </table>
+</div>
+
+<script>
+function myFunction() {
+    const table = document.getElementById("myList");
+    const row = document.createElement("tr");
+
+    const productName = document.createTextNode("Sản phẩm ");
+    const productCodeInput = document.createElement("td");
+    const productNameInput = document.createElement("td");
+    const productQuantityInput = document.createElement("td");
+    const addButtonCell = document.createElement("td");
+    const addButton = document.createElement("button");
+    addButton.innerText = "+";
+
+    productCodeInput.appendChild(document.createElement("input"));
+    productNameInput.appendChild(document.createElement("input"));
+    productQuantityInput.appendChild(document.createElement("input"));
+    addButtonCell.appendChild(addButton);
+
+    row.appendChild(productName);
+    row.appendChild(productCodeInput);
+    row.appendChild(productNameInput);
+    row.appendChild(productQuantityInput);
+    row.appendChild(addButtonCell);
+
+    table.appendChild(row);
+}
+</script>
+
+</body>
+</html>
